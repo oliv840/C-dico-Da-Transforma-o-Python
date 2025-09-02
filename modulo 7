@@ -1,0 +1,26 @@
+# Meu código interativo para manipulação de arquivos
+
+# Peço para o usuário digitar um texto e salvo no meu arquivo
+with open("meu_arquivo.txt", "w") as arquivo:
+    while True:
+        frase = input("Digite uma frase (ou 'sair' para parar): ")
+        if frase.lower() == "sair":
+            break
+        arquivo.write(frase + "\n")
+
+print("\nMeu arquivo foi criado e preenchido com as frases que eu digitei!")
+
+# Leio todo o conteúdo do meu arquivo
+with open("meu_arquivo.txt", "r") as arquivo:
+    conteudo = arquivo.read()
+
+print("\n📂 Conteúdo do meu arquivo:")
+print(conteudo)
+
+# Leio linha por linha do meu arquivo
+with open("meu_arquivo.txt", "r") as arquivo:
+    linhas = arquivo.readlines()
+
+print("\n📌 Lendo linha por linha do meu arquivo:")
+for linha in linhas:
+    print(linha.strip())
