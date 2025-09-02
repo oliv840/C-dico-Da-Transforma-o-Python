@@ -1,0 +1,37 @@
+ Função 1: Saudação: Nathalia # type: ignore
+ 
+ def saudacao(Nathalia):
+
+    print(f"Olá, {Nathalia}! Seja muito bem-vindo(a)!")
+ 
+# Função 2: Calcular média e verificar aprovação
+
+ def calcular_media(nota1, nota2, nota3):
+
+    media = (nota1 + nota2 + nota3) / 3
+
+    print(f"Média: {media:.2f}")
+
+    if media >= 7:
+
+        print("Aluno aprovado!")
+
+    else:
+
+        print("Aluno reprovado!")
+
+
+
+# Função 3: Retornar maior e menor número de uma lista
+
+ def maior_menor(lista):
+
+    if not lista:
+
+        return NotImplemented, NotImplemented 
+
+    maior = max(lista)
+
+    menor = min(lista)
+
+    return maior, menor
