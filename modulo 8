@@ -1,1 +1,54 @@
 
+
+# ===============================
+# Parte 1: Classe Carro
+# ===============================
+
+class Carro:
+    """
+    Classe que representa um carro comum.
+    
+    Atributos:
+        marca (str): Marca do carro
+        modelo (str): Modelo do carro
+    """
+
+    def __init__(self, marca, modelo):
+        # Método especial para inicializar os atributos do objeto
+        self.marca = marca
+        self.modelo = modelo
+
+    def exibir_info(self):
+        # Método que exibe informações do carro
+        print(f"Marca: {self.marca}")
+        print(f"Modelo: {self.modelo}")
+
+    def __str__(self):
+        # Método especial que retorna a representação em string do objeto
+        return f"Carro(marca='{self.marca}', modelo='{self.modelo}')"
+
+
+# ===============================
+# Parte 2: Classe CarroEletrico (Herança)
+# ===============================
+
+class CarroEletrico(Carro):
+    """
+    Classe que representa um carro elétrico, herdando de Carro.
+    
+    Atributos:
+        autonomia_bateria (int): Autonomia da bateria em km
+    """
+
+    def __init__(self, marca, modelo, autonomia_bateria):
+        # Chama o construtor da classe pai
+        super().__init__(marca, modelo)
+        self.autonomia_bateria = autonomia_bateria
+
+    def exibir_info(self):
+        # Método sobrescrito para incluir a autonomia da bateria
+        super().exibir_info()
+        print(f"Autonomia da bateria: {self.autonomia_bateria} km")
+
+    def __str__(self):
+        return f"CarroEletrico(marca='{self.marca}', modelo='{self.modelo}', autonomia_bateria={self.autonomia_bateria}
