@@ -1,0 +1,15 @@
+# ==== PARTE 1: Lista de Compras Dinâmica ====
+
+lista_compras = []
+
+
+
+def adicionar_item(*itens):
+
+    for item in itens:
+
+        if item not in lista_compras:
+
+            lista_compras.append(item)
+
+    print("\n
