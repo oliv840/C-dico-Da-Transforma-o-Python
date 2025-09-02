@@ -1,0 +1,71 @@
+def exibir_menu():
+
+    print("\n==== MENU DE OPERAÇÕES ====")
+
+    print("1 - Soma")
+
+    print("2 - Subtração")
+
+    print("3 - Sair")
+
+
+
+def realizar_soma():
+
+    try:
+
+        a = float(input("Digite o primeiro número: "))
+
+        b = float(input("Digite o segundo número: "))
+
+        print(f"Resultado da soma: {a + b}")
+
+    except ValueError:
+
+        print("⚠️ Entrada inválida. Por favor, digite números.")
+
+
+
+def realizar_subtracao():
+
+    try:
+
+        a = float(input("Digite o primeiro número: "))
+
+        b = float(input("Digite o segundo número: "))
+
+        print(f"Resultado da subtração: {a - b}")
+
+    except ValueError:
+
+        print("⚠️ Entrada inválida. Por favor, digite números.")
+
+
+
+# Loop principal do menu
+
+while True:
+
+    exibir_menu()
+
+    opcao = input("Escolha uma opção (1-3): ")
+
+
+
+    if opcao == '1':
+
+        realizar_soma()
+
+    elif opcao == '2':
+
+        realizar_subtracao()
+
+    elif opcao == '3':
+
+        print("Saindo do programa. Até logo!")
+
+        break
+
+    else:
+
+        print("❌ Opção inválida. Tente novamente.")
